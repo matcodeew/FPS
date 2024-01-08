@@ -6,20 +6,16 @@ using UnityEngine.UIElements;
 
 public class PlayerCamera : MonoBehaviour
 {
-
     public Transform player;
+    public float sensX = 1f;
+    public float sensY = 1f;
 
-    float MouseSensibility = 2f;
-    float CameraVerticalRotation = 0f;
+    private void Start()
+    {
+        UnityEngine.Cursor.lockState = CursorLockMode.Locked;
+        UnityEngine.Cursor.visible = false;
+    }
     private void Update()
     {
-        float inputX = Input.GetAxis("Mouse X") * MouseSensibility;
-
-        float inputY = Input.GetAxis("Mouse Y") * MouseSensibility;
-
-
-        CameraVerticalRotation -= inputY;
-        CameraVerticalRotation = Mathf.Clamp(CameraVerticalRotation, -30f, 20f);
-        transform.localEulerAngles =Vector3.right * CameraVerticalRotation;
     }
 }
