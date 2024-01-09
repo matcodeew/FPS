@@ -456,6 +456,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemy: {fileID: 3807014844129342096}
+  EnemySpawned: 0
+  TotalRound: 10
+  round: 0
+  RandomEnemy: 0
+  countEnemy: 0
   EnemyDead: 0
 --- !u!4 &836312568
 Transform:
@@ -918,6 +923,10 @@ PrefabInstance:
       propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2889634405383019537, guid: 1a7d165bc3a1c9849a4ecb0c0a54e1cf, type: 3}
+      propertyPath: enemy
+      value: 
+      objectReference: {fileID: 836312567}
     - target: {fileID: 2889634405383019537, guid: 1a7d165bc3a1c9849a4ecb0c0a54e1cf, type: 3}
       propertyPath: bullet
       value: 

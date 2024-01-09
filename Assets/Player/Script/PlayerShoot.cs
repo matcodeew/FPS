@@ -6,7 +6,7 @@ using UnityEngine.InputSystem.HID;
 public class PlayerShoot : MonoBehaviour
 {
     [SerializeField] private GameObject bulletSpawn;
-    [SerializeField] private SpawnEnemy enemy;
+    [SerializeField] SpawnEnemy enemy;
 
     public void Shoot()
     { 
