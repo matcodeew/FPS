@@ -7,8 +7,10 @@ using UnityEngine.UIElements;
 public class PlayerCamera : MonoBehaviour
 {
     public Transform player;
-    public float sensX = 1f;
-    public float sensY = 1f;
+
+    float rotationX = 0f;
+    float rotationY = 0f;
+    float MouseSensibility = 2f;
 
     private void Start()
     {
@@ -17,5 +19,12 @@ public class PlayerCamera : MonoBehaviour
     }
     private void Update()
     {
+        rotationX += -Input.GetAxis("Mouse Y") * MouseSensibility;
+        rotationX = Mathf.Clamp(rotationX, -90f, 90);
+
+        rotationY = Input.GetAxis("Mouse X") * MouseSensibility;
+
+        player.transform.localRotation = Quaternion.Euler(rotationX, 0, 0);
+        transform.rotation *= Quaternion.Euler(0, rotationY, 0);
     }
 }

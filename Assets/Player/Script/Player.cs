@@ -6,6 +6,7 @@ using UnityEngine.InputSystem;
 public class Player : MonoBehaviour
 {
    [SerializeField] PlayerMovement move;
+    
     private void Update()
     {
         if(Input.GetKey(KeyCode.W))
@@ -29,4 +30,5 @@ public class Player : MonoBehaviour
             move.JumpPlayer();
         }
     }
+    
 }
