@@ -61,7 +61,7 @@ public class PlayerMovement : MonoBehaviour
     }
     public void JumpPlayer()
     {
-        rb.velocity += new Vector3 (0,5,0) * JumpForce;
+        rb.velocity += Vector3.up * JumpForce;
         CanJump = false;
     }
 
