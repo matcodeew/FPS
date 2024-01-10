@@ -48,6 +48,7 @@ MonoBehaviour:
   enemy: {fileID: 0}
   TotalRound: 10
   RandomEnemy: 0
+  EnemySpawn: 0
   EnemyDead: 0
 --- !u!65 &205253429522886610
 BoxCollider:

@@ -10,22 +10,42 @@ public class PlayerShoot : MonoBehaviour
 
     public ParticleSystem FireParticules;
     public Transform FirePoint;
+    public Transform hitpoint;
+    public ParticleSystem DeadParticule;
 
+    private Vector3 enemypos;
+
+    private void Awake()
+    {
+        DeadParticule.Stop();
+        FireParticules.Stop();
+    }
     public void Shoot()
     {
-        FireParticules.Stop();
         FireParticules.Play();
 
         RaycastHit hit;
-        if (Physics.Raycast(bulletSpawn.transform.position, transform.TransformDirection(Vector3.left), out hit, 15f))
+        Ray ray = new Ray(bulletSpawn.transform.position, bulletSpawn.transform.forward);
+        if (Physics.Raycast(ray, out hit, 15f))
         {
+            enemypos = hit.transform.position;
             Debug.Log(hit.collider.name);
             if (hit.collider.name == "Core")
             {
                 Destroy(hit.transform.gameObject);
+                StartCoroutine(anim());
                 enemy.EnemyDead++;
             }  
         }
+    }
+
+    private IEnumerator anim()
+    {
+        hitpoint.transform.position = enemypos;
+        DeadParticule.Play();
+        yield return new WaitForSeconds(1f);
+        DeadParticule.Stop();
+        yield return null;
     }
     public void ClearOldParticles()
     {

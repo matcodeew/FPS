@@ -43,11 +43,11 @@ public class PlayerCamera : MonoBehaviour
     private void TextCount()
     {
         countEnemy = spawnEnemy.EnemySpawn - spawnEnemy.EnemyDead;
-        lifeMesh.text = countEnemy.ToString();
+        lifeMesh.text = "Enemy missing : " + countEnemy.ToString();
     }
     private void UpdateTextPosition()
     {
         Vector3 screenpos = Camera.main.WorldToScreenPoint(transform.position);
-        lifeMesh.rectTransform.position = screenpos + new Vector3(1100, 1050, 0);
+        lifeMesh.rectTransform.position = screenpos + new Vector3(1000, 1050, 0);
     }
 }

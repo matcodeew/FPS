@@ -11,7 +11,7 @@ public class SpawnEnemy : MonoBehaviour
     public int EnemySpawn;
     public int EnemyDead;
     bool RoundStarted = false;
-    int minEnemy = 2;
+    int minEnemy = 3;
     int maxEnemy = 5;
 
     private void Start()
@@ -41,8 +41,8 @@ public class SpawnEnemy : MonoBehaviour
     void Spawn()
     {
         RoundStarted = true;
-        minEnemy += 5;
-        maxEnemy += 5;
+        minEnemy += 10;
+        maxEnemy += 10;
         RandomEnemy = Random.Range(minEnemy, maxEnemy) + 1;
         Debug.Log(RandomEnemy);
         for (EnemySpawn = 0; EnemySpawn < RandomEnemy; EnemySpawn++)

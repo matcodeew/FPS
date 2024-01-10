@@ -63,6 +63,7 @@
     <Compile Include="Assets\Player\Script\PlayerCamera.cs" />
     <Compile Include="Assets\Enemy\Script\SpawnEnemy.cs" />
     <Compile Include="Assets\Player\Script\PlayerMovement.cs" />
+    <Compile Include="Assets\Menus.cs" />
     <Compile Include="Assets\Player\Script\Player.cs" />
     <Compile Include="Assets\Enemy\Script\EnemyManager.cs" />
     <Compile Include="Assets\Player\Script\PlayerShoot.cs" />
