@@ -1,75 +1,37 @@
 using System.Collections;
 using System.Collections.Generic;
-using System.Data;
 using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {
+    public float speed = 20;
 
-    [SerializeField] GameObject player;
     public Transform orientation;
-     Rigidbody rb;
-    private void Awake()
+
+    Rigidbody rb;
+
+    private void Start()
     {
         rb = GetComponent<Rigidbody>();
+        rb.freezeRotation = true;
     }
 
-    public float Speed = 0.05f;
-    public int JumpForce = 1;
-    public bool CanJump = true;
-
-    Vector3 moveDirection;
-    float verticalInput;
-    float horizontalInput;
-
-    private void Update()
+    public void Update()
     {
         MyInput();
     }
 
-    private void FixedUpdate()
-    {
-        MovePlayer();
-    }
-
     private void MyInput()
     {
-        horizontalInput = Input.GetAxis("Horizontal");
-        verticalInput = Input.GetAxis("Vertical");
-    }
+        float horizontalInput = Input.GetAxisRaw("Horizontal");
+        float verticalInput = Input.GetAxisRaw("Vertical");
 
-    private void MovePlayer()
-    {
-        moveDirection = orientation.forward * verticalInput + orientation.right * horizontalInput;
-    }
+        Vector3 direction = orientation.forward * verticalInput + orientation.right * horizontalInput;
+        direction.Normalize();
 
-    public void MovePLayerForward()
-    {
-        player.transform.position += new Vector3 (moveDirection.x * Speed, 0,moveDirection.z * Speed) ;
-    }
-    public void MovePLayerBehind()
-    {
-        player.transform.position += new Vector3(moveDirection.x * Speed, 0, moveDirection.z * Speed);
-    }
-    public void MovePLayerLeft()
-    {
-        player.transform.position += new Vector3(moveDirection.x * Speed, 0, moveDirection.z * Speed);
-    }
-    public void MovePLayerRight()
-    {
-        player.transform.position += new Vector3(moveDirection.x * Speed, 0, moveDirection.z * Speed);
-    }
-    public void JumpPlayer()
-    {
-        rb.velocity += Vector3.up * JumpForce;
-        CanJump = false;
-    }
+        Vector3 movement = direction * speed * Time.deltaTime;
+        movement.y = 0;
 
-    private void OnCollisionEnter(Collision collision)
-    {
-        if(collision.collider.tag == "Floor")
-        {
-            CanJump = true;
-        }
+        transform.Translate(movement);
     }
 }

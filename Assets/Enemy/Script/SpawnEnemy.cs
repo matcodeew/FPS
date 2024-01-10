@@ -1,24 +1,72 @@
 using System.Collections;
-using System.Collections.Generic;
-using Unity.VisualScripting;
 using UnityEngine;
 
 public class SpawnEnemy : MonoBehaviour
 {
     [SerializeField] private GameObject enemy;
 
-    public bool EnemySpawned = false;
-    public int TotalRound = 10;
+    public int TotalRound;
     int roundwin;
     public int RandomEnemy;
-    public int countEnemy;
+    public int EnemySpawn;
     public int EnemyDead;
+    bool RoundStarted = false;
+    int minEnemy = 2;
+    int maxEnemy = 5;
 
-    List<int> round;
-
-    void RoundToWin()
+    private void Start()
     {
-        round.Add(roundwin);
+        ResetValue();
+        StartCoroutine(StartRounds());
     }
 
+    private IEnumerator StartRounds()
+    {
+        while (roundwin < TotalRound)
+        {
+            if (!RoundStarted)
+            {
+                Spawn();
+                yield return new WaitForSeconds(2f);
+            }
+            yield return null;
+        }
+    }
+
+    private void Update()
+    {
+        Verif();
+    }
+
+    void Spawn()
+    {
+        RoundStarted = true;
+        minEnemy += 5;
+        maxEnemy += 5;
+        RandomEnemy = Random.Range(minEnemy, maxEnemy) + 1;
+        Debug.Log(RandomEnemy);
+        for (EnemySpawn = 0; EnemySpawn < RandomEnemy; EnemySpawn++)
+        {
+            GameObject newEnemy = Instantiate(enemy, transform.position + new Vector3(Random.Range(-100, 100), 0, Random.Range(-100, 100)), Quaternion.identity);
+        }
+    }
+
+    private void Verif()
+    {
+        if (EnemyDead == RandomEnemy)
+        {
+            roundwin++;
+            EnemyDead = 0;
+
+            RoundStarted = false;
+        }
+    }
+
+    private void ResetValue()
+    {
+        EnemyDead = 0;
+        EnemySpawn = 0;
+        RandomEnemy = 0;
+        roundwin = 0;
+    }
 }

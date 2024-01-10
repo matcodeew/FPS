@@ -5,11 +5,8 @@ using UnityEngine.AI;
 
 public class EnemyManager : MonoBehaviour
 {
-    PlayerShoot shoot;
-
     public Transform target;
     public NavMeshAgent agent;
-    [SerializeField] private GameObject bullet;
     private void Start()
     {
         agent = GetComponent<NavMeshAgent>();
@@ -19,10 +16,4 @@ public class EnemyManager : MonoBehaviour
         agent.destination = target.position;
     }
 
-    private void OnCollisionEnter(Collision collision)
-    {
-        
-    }
-
 }
-
