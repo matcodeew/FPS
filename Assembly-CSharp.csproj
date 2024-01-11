@@ -63,10 +63,13 @@
     <Compile Include="Assets\Player\Script\PlayerCamera.cs" />
     <Compile Include="Assets\Enemy\Script\SpawnEnemy.cs" />
     <Compile Include="Assets\Player\Script\PlayerMovement.cs" />
-    <Compile Include="Assets\Menus.cs" />
+    <Compile Include="Assets\terrain\ObstacleManager.cs" />
+    <Compile Include="Assets\Menu\Victory.cs" />
+    <Compile Include="Assets\Menu\Menus.cs" />
     <Compile Include="Assets\Player\Script\Player.cs" />
     <Compile Include="Assets\Enemy\Script\EnemyManager.cs" />
     <Compile Include="Assets\Player\Script\PlayerShoot.cs" />
+    <Compile Include="Assets\Menu\GameOver.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />

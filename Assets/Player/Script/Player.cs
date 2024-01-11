@@ -1,31 +1,95 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Runtime.CompilerServices;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class Player : MonoBehaviour
 {
     [SerializeField] PlayerMovement move;
-
+    [SerializeField] SpawnEnemy spawnEnemy;
     [SerializeField] PlayerShoot shoot;
 
-    private float fireRate = 0.5f;
+    private float fireRate = 0.2f;
     private float canfire = -1f;
+
+    public Slider slider;
+    float mawLife = 100;
+    float playerLife;
+
+    string VictoryScene = "Victory";
+    string GameOverScene = "GameOver";
+
+    public bool canDash = true;
+
+    private void Start()
+    {
+        playerLife = mawLife;
+    }
     private void Update()
     {
-        if (Input.GetMouseButtonDown(0))
-        {
-            shoot.Shoot();
-        }
-        if (Input.GetKeyDown(KeyCode.LeftShift) && Time.time > canfire)
+        slider.value = playerLife;
+        if (Input.GetMouseButtonDown(0) && Time.time > canfire)
         {
             canfire = Time.time + fireRate;
-            move.speed = 40;
+            shoot.Shoot();
         }
-        else if (Input.GetKeyUp(KeyCode.LeftShift))
+
+        StartCoroutine(Dash());
+        Victory();
+        GameOver();
+    }
+
+    private IEnumerator Dash()
+    {
+        if (Input.GetKeyDown(KeyCode.LeftShift))
         {
-            move.speed = 20;
+            if (canDash == true)
+            {
+                canDash = false;
+                move.speed = 200;
+                yield return new WaitForSeconds(0.1f);
+                move.speed = 20;
+                yield return new WaitForSeconds(0.4f);
+                canDash = true;
+            }
+
+            yield return null;
         }
     }
 
+    private void Victory()
+    {
+        if (spawnEnemy.roundwin == spawnEnemy.TotalRound)
+        {
+            UnityEngine.Cursor.lockState = CursorLockMode.None;
+            UnityEngine.Cursor.visible = true;
+            SceneManager.LoadScene(VictoryScene);
+        }
+    }
+    private void GameOver()
+    {
+        if (playerLife <= 0)
+        {
+            UnityEngine.Cursor.lockState = CursorLockMode.None;
+            UnityEngine.Cursor.visible = true;
+            SceneManager.LoadScene(GameOverScene);
+        }
+    }
+
+    public float PlayerLife()
+    {
+        if (playerLife >= 0)
+        {
+            playerLife -= Time.time * 0.08f;
+            return playerLife;
+        }
+        else
+        {
+            return 0f;
+        }
+
+    }
 }

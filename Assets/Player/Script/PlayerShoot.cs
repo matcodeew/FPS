@@ -26,11 +26,10 @@ public class PlayerShoot : MonoBehaviour
 
         RaycastHit hit;
         Ray ray = new Ray(bulletSpawn.transform.position, bulletSpawn.transform.forward);
-        if (Physics.Raycast(ray, out hit, 15f))
+        if (Physics.Raycast(ray, out hit, 25f))
         {
             enemypos = hit.transform.position;
-            Debug.Log(hit.collider.name);
-            if (hit.collider.name == "Core")
+            if (hit.collider.tag == "Enemy")
             {
                 Destroy(hit.transform.gameObject);
                 StartCoroutine(anim());

@@ -7,9 +7,10 @@ public class PlayerMovement : MonoBehaviour
     public float speed = 20;
 
     public Transform orientation;
-
+    [SerializeField] private Player manager;
     Rigidbody rb;
 
+    
     private void Start()
     {
         rb = GetComponent<Rigidbody>();
@@ -33,5 +34,13 @@ public class PlayerMovement : MonoBehaviour
         movement.y = 0;
 
         transform.Translate(movement);
+    }
+
+    private void OnCollisionEnter(Collision collision)
+    {
+        if(collision.gameObject.tag == "Enemy")
+        {
+            manager.PlayerLife();
+        }
     }
 }

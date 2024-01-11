@@ -11,6 +11,10 @@ public class PlayerCamera : MonoBehaviour
 
     public TextMeshProUGUI lifeMesh;
     int countEnemy;
+
+    public TextMeshProUGUI RoundMesh;
+    int RoundCount;
+
     public SpawnEnemy spawnEnemy;
 
     float rotationX = 0f;
@@ -44,10 +48,14 @@ public class PlayerCamera : MonoBehaviour
     {
         countEnemy = spawnEnemy.EnemySpawn - spawnEnemy.EnemyDead;
         lifeMesh.text = "Enemy missing : " + countEnemy.ToString();
+
+        RoundCount = spawnEnemy.TotalRound - spawnEnemy.roundwin;
+        RoundMesh.text = " round : " + RoundCount.ToString();
     }
     private void UpdateTextPosition()
     {
         Vector3 screenpos = Camera.main.WorldToScreenPoint(transform.position);
         lifeMesh.rectTransform.position = screenpos + new Vector3(1000, 1050, 0);
+        RoundMesh.rectTransform.position = screenpos + new Vector3(100, 1050, 0);
     }
 }

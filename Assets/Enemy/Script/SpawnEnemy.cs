@@ -6,13 +6,13 @@ public class SpawnEnemy : MonoBehaviour
     [SerializeField] private GameObject enemy;
 
     public int TotalRound;
-    int roundwin;
+    public int roundwin;
     public int RandomEnemy;
     public int EnemySpawn;
     public int EnemyDead;
     bool RoundStarted = false;
-    int minEnemy = 3;
-    int maxEnemy = 5;
+    int minEnemy = 1;
+    int maxEnemy = 10;
 
     private void Start()
     {
@@ -44,7 +44,6 @@ public class SpawnEnemy : MonoBehaviour
         minEnemy += 10;
         maxEnemy += 10;
         RandomEnemy = Random.Range(minEnemy, maxEnemy) + 1;
-        Debug.Log(RandomEnemy);
         for (EnemySpawn = 0; EnemySpawn < RandomEnemy; EnemySpawn++)
         {
             GameObject newEnemy = Instantiate(enemy, transform.position + new Vector3(Random.Range(-100, 100), 0, Random.Range(-100, 100)), Quaternion.identity);
