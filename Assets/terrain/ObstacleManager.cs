@@ -1,19 +1,16 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class ObstacleManager : MonoBehaviour
 {
-    [SerializeField] private GameObject obstacle;
+    [SerializeField] public GameObject obstacle;
     [SerializeField] private GameObject MapSurface;
 
-    int MaxObs = 50;
+    int MaxObs = 100;
     bool ObstacleCreated = false;
 
 
     private void Start()
     {
-        obstacle = GetComponent<GameObject>();
         CreateObstacle();
     }
     private void CreateObstacle()
@@ -22,10 +19,9 @@ public class ObstacleManager : MonoBehaviour
         {
             for (int i = 0; i < MaxObs; i++)
             {
-                GameObject newObstacle = Instantiate(obstacle, MapSurface.transform.position + new Vector3(Random.Range(-200, 200), 0, Random.Range(-200, 200)), Quaternion.identity);
+                GameObject newObstacle = Instantiate(obstacle, MapSurface.transform.position + new Vector3(Random.Range(-200, 200), 2.52f, Random.Range(-200, 200)), Quaternion.identity);
             }
             ObstacleCreated = true;
         }
     }
-
 }

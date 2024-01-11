@@ -361,10 +361,15 @@
 -analyzer:"C:/Program Files/Unity/Hub/Editor/2022.3.14f1/Editor/Data/Tools/Unity.SourceGenerators/Unity.SourceGenerators.dll"
 "Assets/Enemy/Script/EnemyManager.cs"
 "Assets/Enemy/Script/SpawnEnemy.cs"
+"Assets/Menu/GameOver.cs"
+"Assets/Menu/Menus.cs"
+"Assets/Menu/Victory.cs"
 "Assets/Player/Script/Player.cs"
 "Assets/Player/Script/PlayerCamera.cs"
 "Assets/Player/Script/PlayerMovement.cs"
 "Assets/Player/Script/PlayerShoot.cs"
+"Assets/Player/Script/WeaponsReaload.cs"
+"Assets/terrain/ObstacleManager.cs"
 -langversion:9.0
 
 /deterministic

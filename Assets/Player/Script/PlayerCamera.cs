@@ -1,9 +1,5 @@
-using System.Collections;
-using System.Collections.Generic;
 using TMPro;
-using UnityEditor;
 using UnityEngine;
-using UnityEngine.UIElements;
 
 public class PlayerCamera : MonoBehaviour
 {
@@ -15,7 +11,11 @@ public class PlayerCamera : MonoBehaviour
     public TextMeshProUGUI RoundMesh;
     int RoundCount;
 
+    public TextMeshProUGUI AmmountMesh;
+    int AmmountCount;
+
     public SpawnEnemy spawnEnemy;
+    public PlayerShoot shoot;
 
     float rotationX = 0f;
     float rotationY = 0f;
@@ -51,6 +51,9 @@ public class PlayerCamera : MonoBehaviour
 
         RoundCount = spawnEnemy.TotalRound - spawnEnemy.roundwin;
         RoundMesh.text = " round : " + RoundCount.ToString();
+
+        AmmountCount = shoot.ammount;
+        AmmountMesh.text = AmmountCount.ToString();
     }
     private void UpdateTextPosition()
     {

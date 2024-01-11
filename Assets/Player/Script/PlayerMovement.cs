@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
@@ -10,7 +8,7 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private Player manager;
     Rigidbody rb;
 
-    
+    float bonusLife;
     private void Start()
     {
         rb = GetComponent<Rigidbody>();
@@ -41,6 +39,19 @@ public class PlayerMovement : MonoBehaviour
         if(collision.gameObject.tag == "Enemy")
         {
             manager.PlayerLife();
+        }
+        if(collision.gameObject.tag == "HealBonus")
+        {
+            Destroy(collision.gameObject);
+            if(manager.PlayerLife() < 100)
+            {
+                manager.playerLife += 10;
+            }
+            else
+            {
+                manager.playerLife += 0;
+            }
+            Debug.Log(manager.playerLife);
         }
     }
 }

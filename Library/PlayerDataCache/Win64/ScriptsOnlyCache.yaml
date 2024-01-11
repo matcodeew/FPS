@@ -4,12 +4,15 @@ ScriptsOnlyBuild:
     - EnemyManager
     - GameOver
     - Menus
+    - ObstacleManager
     - Player
     - PlayerCamera
     - PlayerMovement
     - PlayerShoot
     - SpawnEnemy
     - Victory
+    Unity.AI.Navigation.Editor.dll:
+    - Unity.AI.Navigation.Editor.NavMeshAssetManager
     Unity.AI.Navigation.dll:
     - Unity.AI.Navigation.NavMeshSurface
     Unity.InputSystem.dll:
@@ -122,15 +125,15 @@ ScriptsOnlyBuild:
     - Class: 108
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 1560}
+      Script: {instanceID: 1562}
     - Class: 114
-      Script: {instanceID: 1606}
+      Script: {instanceID: 1608}
     - Class: 114
       Script: {instanceID: 2734}
     - Class: 114
-      Script: {instanceID: 2948}
+      Script: {instanceID: 2950}
     - Class: 114
-      Script: {instanceID: 3250}
+      Script: {instanceID: 3252}
     - Class: 114
       Script: {instanceID: 3696}
     - Class: 114
@@ -144,13 +147,15 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 6232}
     - Class: 114
-      Script: {instanceID: 6260}
+      Script: {instanceID: 6262}
     - Class: 114
-      Script: {instanceID: 6592}
+      Script: {instanceID: 6594}
     - Class: 114
-      Script: {instanceID: 6832}
+      Script: {instanceID: 6834}
     - Class: 114
-      Script: {instanceID: 8034}
+      Script: {instanceID: 8036}
+    - Class: 114
+      Script: {instanceID: 8634}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -168,6 +173,8 @@ ScriptsOnlyBuild:
     - Class: 198
       Script: {instanceID: 0}
     - Class: 199
+      Script: {instanceID: 0}
+    - Class: 208
       Script: {instanceID: 0}
     - Class: 222
       Script: {instanceID: 0}
@@ -201,21 +208,21 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 1560}
     - Class: 114
-      Script: {instanceID: 1606}
+      Script: {instanceID: 1562}
+    - Class: 114
+      Script: {instanceID: 1608}
     - Class: 114
       Script: {instanceID: 2734}
     - Class: 114
-      Script: {instanceID: 2948}
-    - Class: 114
-      Script: {instanceID: 3266}
+      Script: {instanceID: 2950}
     - Class: 114
       Script: {instanceID: 5444}
     - Class: 114
       Script: {instanceID: 6232}
     - Class: 114
-      Script: {instanceID: 6592}
+      Script: {instanceID: 6238}
     - Class: 114
-      Script: {instanceID: 35924}
+      Script: {instanceID: 6594}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -258,17 +265,15 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 1560}
     - Class: 114
-      Script: {instanceID: 1606}
+      Script: {instanceID: 1562}
     - Class: 114
-      Script: {instanceID: 2256}
+      Script: {instanceID: 1608}
     - Class: 114
-      Script: {instanceID: 2428}
+      Script: {instanceID: 2258}
     - Class: 114
       Script: {instanceID: 2734}
     - Class: 114
-      Script: {instanceID: 2948}
-    - Class: 114
-      Script: {instanceID: 3266}
+      Script: {instanceID: 2950}
     - Class: 114
       Script: {instanceID: 4396}
     - Class: 114
@@ -278,7 +283,9 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 6232}
     - Class: 114
-      Script: {instanceID: 6592}
+      Script: {instanceID: 6594}
+    - Class: 114
+      Script: {instanceID: 8638}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -319,21 +326,21 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 1560}
     - Class: 114
-      Script: {instanceID: 1606}
+      Script: {instanceID: 1562}
+    - Class: 114
+      Script: {instanceID: 1608}
     - Class: 114
       Script: {instanceID: 2734}
     - Class: 114
-      Script: {instanceID: 2948}
+      Script: {instanceID: 2942}
     - Class: 114
-      Script: {instanceID: 3266}
+      Script: {instanceID: 2950}
     - Class: 114
       Script: {instanceID: 5444}
     - Class: 114
       Script: {instanceID: 6232}
     - Class: 114
-      Script: {instanceID: 6592}
-    - Class: 114
-      Script: {instanceID: 35920}
+      Script: {instanceID: 6594}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -351,6 +358,12 @@ ScriptsOnlyBuild:
     - Class: 224
       Script: {instanceID: 0}
   scriptHashData:
+  - hash:
+      serializedVersion: 2
+      Hash: 915204dac8acad99f076d6e72ada0a0f
+    assemblyName: UnityEngine.UI
+    namespaceName: UnityEngine.UI
+    className: Button
   - hash:
       serializedVersion: 2
       Hash: 540882762544409cc4530e60db00e951
@@ -479,12 +492,6 @@ ScriptsOnlyBuild:
     className: RawImage
   - hash:
       serializedVersion: 2
-      Hash: 14d43bf8872d640d853df05470994a1d
-    assemblyName: Assembly-CSharp
-    namespaceName: 
-    className: Menus
-  - hash:
-      serializedVersion: 2
       Hash: 1321993db8249e1e05e1e0492b2bbdc3
     assemblyName: Unity.VisualScripting.Core
     namespaceName: Unity.VisualScripting
@@ -537,6 +544,12 @@ ScriptsOnlyBuild:
     assemblyName: UnityEngine.TestRunner
     namespaceName: UnityEngine.TestRunner.Utils
     className: TestRunCallbackListener
+  - hash:
+      serializedVersion: 2
+      Hash: 5050104461a35c6bedf3b6866b2e9a09
+    assemblyName: Assembly-CSharp
+    namespaceName: 
+    className: Victory
   - hash:
       serializedVersion: 2
       Hash: 5a4aa2850fe11587f47e34c270c7fd22
@@ -599,16 +612,10 @@ ScriptsOnlyBuild:
     className: ToggleGroup
   - hash:
       serializedVersion: 2
-      Hash: 1adc0270db7f3d22b3ed430146ddcc7c
+      Hash: eb8d867148ee28b12044a4e98a0b0fa9
     assemblyName: Assembly-CSharp
     namespaceName: 
     className: PlayerShoot
-  - hash:
-      serializedVersion: 2
-      Hash: 915204dac8acad99f076d6e72ada0a0f
-    assemblyName: UnityEngine.UI
-    namespaceName: UnityEngine.UI
-    className: Button
   - hash:
       serializedVersion: 2
       Hash: d90629714fa6b0145fcaffc87f5c6559
@@ -1055,7 +1062,7 @@ ScriptsOnlyBuild:
     className: PlayerInputManagerEditor
   - hash:
       serializedVersion: 2
-      Hash: 49ff0cce4d5cfe1d701e8eb800880d30
+      Hash: 98d43dce22b03c1f86c12283f57cf7c4
     assemblyName: Assembly-CSharp
     namespaceName: 
     className: Player
@@ -1077,6 +1084,12 @@ ScriptsOnlyBuild:
     assemblyName: Unity.TextMeshPro
     namespaceName: TMPro
     className: TextMeshProUGUI
+  - hash:
+      serializedVersion: 2
+      Hash: bc9e5df4730dc2e3e91e4b81a4e8e6b1
+    assemblyName: Assembly-CSharp
+    namespaceName: 
+    className: GameOver
   - hash:
       serializedVersion: 2
       Hash: 8c7be9a96d0b9932c2c99bc74cb51b71
@@ -1421,16 +1434,16 @@ ScriptsOnlyBuild:
     className: UnityOnSliderValueChangedMessageListener
   - hash:
       serializedVersion: 2
-      Hash: 5050104461a35c6bedf3b6866b2e9a09
+      Hash: 8754b6a1859f59e4304f504e2e21142a
     assemblyName: Assembly-CSharp
     namespaceName: 
-    className: Victory
+    className: ObstacleManager
   - hash:
       serializedVersion: 2
-      Hash: bc9e5df4730dc2e3e91e4b81a4e8e6b1
+      Hash: 14d43bf8872d640d853df05470994a1d
     assemblyName: Assembly-CSharp
     namespaceName: 
-    className: GameOver
+    className: Menus
   platform: 19
   scenePathNames:
   - Assets/Scenes/MainMenu.unity

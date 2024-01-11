@@ -1,8 +1,5 @@
 using System.Collections;
-using System.Collections.Generic;
-using System.Runtime.CompilerServices;
 using UnityEngine;
-using UnityEngine.InputSystem;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
@@ -11,13 +8,14 @@ public class Player : MonoBehaviour
     [SerializeField] PlayerMovement move;
     [SerializeField] SpawnEnemy spawnEnemy;
     [SerializeField] PlayerShoot shoot;
+    [SerializeField] WeaponsReaload weaponReload;
 
     private float fireRate = 0.2f;
     private float canfire = -1f;
 
     public Slider slider;
     float mawLife = 100;
-    float playerLife;
+    public float playerLife;
 
     string VictoryScene = "Victory";
     string GameOverScene = "GameOver";
@@ -35,6 +33,10 @@ public class Player : MonoBehaviour
         {
             canfire = Time.time + fireRate;
             shoot.Shoot();
+        }
+        if(Input.GetKeyDown(KeyCode.R))
+        {
+            weaponReload.Reload();
         }
 
         StartCoroutine(Dash());

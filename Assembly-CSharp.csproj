@@ -66,6 +66,7 @@
     <Compile Include="Assets\terrain\ObstacleManager.cs" />
     <Compile Include="Assets\Menu\Victory.cs" />
     <Compile Include="Assets\Menu\Menus.cs" />
+    <Compile Include="Assets\Player\Script\WeaponsReaload.cs" />
     <Compile Include="Assets\Player\Script\Player.cs" />
     <Compile Include="Assets\Enemy\Script\EnemyManager.cs" />
     <Compile Include="Assets\Player\Script\PlayerShoot.cs" />
