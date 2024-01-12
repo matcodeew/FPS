@@ -29,7 +29,6 @@ public class PlayerShoot : MonoBehaviour
         {
             FireParticules.Play();
             ammount--;
-            Debug.Log(ammount);
             RaycastHit hit;
             Ray ray = new Ray(bulletSpawn.transform.position, bulletSpawn.transform.forward);
             if (Physics.Raycast(ray, out hit, 30f))

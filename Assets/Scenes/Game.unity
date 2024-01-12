@@ -728,7 +728,7 @@ PrefabInstance:
       objectReference: {fileID: 3807014844129342096}
     - target: {fileID: 5521625145935438518, guid: 7f7e73c61b9fbed42a45a9d9874f74b0, type: 3}
       propertyPath: TotalRound
-      value: 3
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 6582271468861534204, guid: 7f7e73c61b9fbed42a45a9d9874f74b0, type: 3}
       propertyPath: m_Name

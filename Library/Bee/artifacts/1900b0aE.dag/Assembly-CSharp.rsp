@@ -368,6 +368,7 @@
 "Assets/Player/Script/PlayerCamera.cs"
 "Assets/Player/Script/PlayerMovement.cs"
 "Assets/Player/Script/PlayerShoot.cs"
+"Assets/Player/Script/WeaponsReaload.cs"
 "Assets/terrain/ObstacleManager.cs"
 -langversion:9.0
 
