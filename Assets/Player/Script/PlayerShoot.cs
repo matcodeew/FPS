@@ -5,7 +5,7 @@ public class PlayerShoot : MonoBehaviour
 {
     [SerializeField] private GameObject bulletSpawn;
     [SerializeField] SpawnEnemy spawnenemy;
-    [SerializeField] private GameObject Bullet ;
+    [SerializeField] private GameObject HealOrbs ;
 
     public ParticleSystem FireParticules;
     public Transform FirePoint;
@@ -14,9 +14,7 @@ public class PlayerShoot : MonoBehaviour
     public ParticleSystem HealParticule;
 
     private Vector3 enemypos;
-
     public int ammount = 10;
-
     private void Awake()
     {
         DeadParticule.Stop();
@@ -56,10 +54,10 @@ public class PlayerShoot : MonoBehaviour
 
     private void SpawnHealOrbs()
     {
-        int GenerateRandomNumber = Random.Range(0, 6);
+        int GenerateRandomNumber = Random.Range(0, 8);
         if(GenerateRandomNumber == 1)
         {
-            GameObject NewBullet = Instantiate(Bullet,new Vector3(enemypos.x, 0.5f, enemypos.z), Quaternion.identity);
+            GameObject NewBullet = Instantiate(HealOrbs, new Vector3(enemypos.x, 0.5f, enemypos.z), Quaternion.identity);
             HealParticule.Play();
         }
     }
