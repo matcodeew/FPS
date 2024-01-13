@@ -51,7 +51,6 @@ public class PlayerMovement : MonoBehaviour
             {
                 manager.playerLife += 0;
             }
-            Debug.Log(manager.playerLife);
         }
     }
 }
