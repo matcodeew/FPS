@@ -1,18 +1,25 @@
+using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class PlayerCamera : MonoBehaviour
 {
     public Transform player;
+    [SerializeField] private Player Player;
 
-    public TextMeshProUGUI lifeMesh;
+    public TextMeshProUGUI EnemyMesh;
     int countEnemy;
 
     public TextMeshProUGUI RoundMesh;
     int RoundCount;
 
-    public TextMeshProUGUI AmmountMesh;
-    int AmmountCount;
+    public TextMeshProUGUI lifeMesh;
+
+
+    public GameObject munitionImage;
+    public GameObject munitionParent;
+    public List<GameObject> allMunitionImages = new List<GameObject>();
 
     public SpawnEnemy spawnEnemy;
     public PlayerShoot shoot;
@@ -25,6 +32,7 @@ public class PlayerCamera : MonoBehaviour
     {
         TextCount();
         UpdateTextPosition();
+        CreateMunitionSprite();
         UnityEngine.Cursor.lockState = CursorLockMode.Locked;
         UnityEngine.Cursor.visible = false;
     }
@@ -47,18 +55,44 @@ public class PlayerCamera : MonoBehaviour
     private void TextCount()
     {
         countEnemy = spawnEnemy.EnemySpawn - spawnEnemy.EnemyDead;
-        lifeMesh.text = "Enemy missing : " + countEnemy.ToString();
+        EnemyMesh.text = "Enemy missing : " + countEnemy.ToString();
 
         RoundCount = spawnEnemy.TotalRound - spawnEnemy.roundwin;
         RoundMesh.text = " round : " + RoundCount.ToString();
 
-        AmmountCount = shoot.ammount;
-        AmmountMesh.text = AmmountCount.ToString();
+        lifeMesh.text = Player.currentPlayerLife.ToString() + " /100";
     }
     private void UpdateTextPosition()
     {
         Vector3 screenpos = Camera.main.WorldToScreenPoint(transform.position);
-        lifeMesh.rectTransform.position = screenpos + new Vector3(1000, 1050, 0);
+        EnemyMesh.rectTransform.position = screenpos + new Vector3(1000, 1050, 0);
         RoundMesh.rectTransform.position = screenpos + new Vector3(100, 1050, 0);
+    }
+
+    public void CreateMunitionSprite()
+    {
+        DestroyAllMunitionImage();
+        allMunitionImages.Clear();
+        for (int i = 0; i < shoot.ammount; i++)
+        {
+            if(munitionImage != null)
+            {
+                GameObject newMunition = Instantiate(munitionImage, munitionParent.transform.position + new Vector3(i * 20, 0, 0), Quaternion.identity);
+                newMunition.transform.SetParent(munitionParent.transform);
+
+                if(newMunition != null)
+                {allMunitionImages.Add(newMunition);}
+            }
+        }
+    }
+    public void DestroyAllMunitionImage()
+    {
+        foreach(var munition in allMunitionImages)
+        {
+            if(munition != null)
+            {
+                Destroy(munition);
+            }
+        }
     }
 }

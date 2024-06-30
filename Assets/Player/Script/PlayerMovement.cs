@@ -43,14 +43,20 @@ public class PlayerMovement : MonoBehaviour
         if(collision.gameObject.tag == "HealBonus")
         {
             Destroy(collision.gameObject);
-            if(manager.PlayerLife() < 100)
-            {
-                manager.playerLife += 10;
-            }
-            else
-            {
-                manager.playerLife += 0;
-            }
+            manager.currentPlayerLife += HealPlayer();
         }
+    }
+
+    private int HealPlayer()
+    {
+        if(manager.currentPlayerLife < 100)
+        {
+            if(manager.currentPlayerLife + manager.orbHeal > 100)
+            {return 100 - manager.currentPlayerLife;}
+            else
+            {return manager.orbHeal; }
+        }
+        else
+        {return 0;}
     }
 }

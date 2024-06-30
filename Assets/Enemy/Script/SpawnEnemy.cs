@@ -6,6 +6,9 @@ public class SpawnEnemy : MonoBehaviour
     [SerializeField] private GameObject normalEnemy;
     [SerializeField] private GameObject FasterEnemy;
 
+    [SerializeField] private GameObject fasterEnemyParent;
+    [SerializeField] private GameObject normalEnemyParent;
+
     [SerializeField] private fasterEnemyManager yellowEnemy;
     [SerializeField] private EnemyManager redEnemy;
 
@@ -60,10 +63,12 @@ public class SpawnEnemy : MonoBehaviour
             if(RandomTypeEnemy == 0)
             {
                 GameObject newEnemy = Instantiate(normalEnemy, transform.position + new Vector3(Random.Range(-100, 100), 0, Random.Range(-100, 100)), Quaternion.identity);
+                newEnemy.transform.SetParent(normalEnemyParent.transform);
             }
             else if (RandomTypeEnemy == 1)
             {
                 GameObject newEnemy = Instantiate(FasterEnemy, transform.position + new Vector3(Random.Range(-100, 100), 0, Random.Range(-100, 100)), Quaternion.identity);
+                newEnemy.transform.SetParent(fasterEnemyParent.transform);
             }
         }
     }

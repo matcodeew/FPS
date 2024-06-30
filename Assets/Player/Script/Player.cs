@@ -10,25 +10,30 @@ public class Player : MonoBehaviour
     [SerializeField] PlayerShoot shoot;
     [SerializeField] WeaponsReaload weaponReload;
 
-    private float fireRate = 0.2f;
     private float canfire = -1f;
 
     public Slider slider;
-    float mawLife = 100;
-    public float playerLife;
+    public int currentPlayerLife;
 
     string VictoryScene = "Victory";
     string GameOverScene = "GameOver";
 
+
     public bool canDash = true;
+
+    /// </varaible modifiable bonus fin de manche>
+    public int maxLife = 100;
+    public int orbHeal = 15;
+    public float fireRate = 0.2f;
+    /// </varaible modifiable bonus fin de manche>
 
     private void Start()
     {
-        playerLife = mawLife;
+        currentPlayerLife = maxLife;
     }
     private void Update()
     {
-        slider.value = playerLife;
+        slider.value = currentPlayerLife;
         if (Input.GetMouseButtonDown(0) && Time.time > canfire)
         {
             canfire = Time.time + fireRate;
@@ -54,7 +59,7 @@ public class Player : MonoBehaviour
                 move.speed = 200;
                 yield return new WaitForSeconds(0.1f);
                 move.speed = 20;
-                yield return new WaitForSeconds(0.4f);
+                yield return new WaitForSeconds(0.5f - 0.1f);
                 canDash = true;
             }
 
@@ -73,7 +78,7 @@ public class Player : MonoBehaviour
     }
     private void GameOver()
     {
-        if (playerLife <= 0)
+        if (currentPlayerLife <= 0)
         {
             UnityEngine.Cursor.lockState = CursorLockMode.None;
             UnityEngine.Cursor.visible = true;
@@ -81,16 +86,16 @@ public class Player : MonoBehaviour
         }
     }
 
-    public float PlayerLife()
+    public int PlayerLife()
     {
-        if (playerLife >= 0)
+        if (currentPlayerLife >= 0)
         {
-            playerLife -= Time.time * 0.08f;
-            return playerLife;
+            currentPlayerLife -= 5;
+            return currentPlayerLife;
         }
         else
         {
-            return 0f;
+            return 0;
         }
 
     }

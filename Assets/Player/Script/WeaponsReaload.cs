@@ -3,13 +3,14 @@ using UnityEngine;
 public class WeaponsReaload : MonoBehaviour
 {
     [SerializeField] private PlayerShoot playershoot;
+    [SerializeField] private PlayerCamera plauerUi;
     public Animation reloadAnim;
-    bool reload = false;
 
 
     public void Reload()
     {
         reloadAnim.Play();
         playershoot.ammount = 10;
+        plauerUi.CreateMunitionSprite();
     }
 }

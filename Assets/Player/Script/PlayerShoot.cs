@@ -5,6 +5,7 @@ public class PlayerShoot : MonoBehaviour
 {
     [SerializeField] private GameObject bulletSpawn;
     [SerializeField] SpawnEnemy spawnenemy;
+    [SerializeField] PlayerCamera playerUI;
     [SerializeField] private GameObject HealOrbs ;
 
     public ParticleSystem FireParticules;
@@ -25,6 +26,11 @@ public class PlayerShoot : MonoBehaviour
     {
         if(ammount > 0)
         {
+            if (playerUI.allMunitionImages[ammount - 1].gameObject != null)
+            {
+                Destroy(playerUI.allMunitionImages[ammount - 1].gameObject);
+            }
+
             FireParticules.Play();
             ammount--;
             RaycastHit hit;
