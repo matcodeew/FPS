@@ -53,6 +53,7 @@ public class PlayerMovement : MonoBehaviour
         {
             if(manager.currentPlayerLife + manager.orbHeal > 100)
             {return 100 - manager.currentPlayerLife;}
+
             else
             {return manager.orbHeal; }
         }

@@ -35,7 +35,7 @@ public class PlayerShoot : MonoBehaviour
             ammount--;
             RaycastHit hit;
             Ray ray = new Ray(bulletSpawn.transform.position, bulletSpawn.transform.forward);
-            if (Physics.Raycast(ray, out hit, 30f))
+            if (Physics.Raycast(ray, out hit, 50f))
             {
                 enemypos = hit.transform.position;
                 if (hit.collider.tag == "Enemy")
