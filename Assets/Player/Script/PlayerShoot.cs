@@ -1,10 +1,11 @@
 using System.Collections;
+using TMPro;
 using UnityEngine;
 
 public class PlayerShoot : MonoBehaviour
 {
     [SerializeField] private GameObject bulletSpawn;
-    [SerializeField] SpawnEnemy spawnenemy;
+    [SerializeField] SpawnEnemy spawnEnemy;
     [SerializeField] PlayerCamera playerUI;
     [SerializeField] private GameObject HealOrbs ;
 
@@ -16,12 +17,19 @@ public class PlayerShoot : MonoBehaviour
 
     private Vector3 enemypos;
     public int ammount = 10;
+
+    [SerializeField] public TextMeshProUGUI enemyMesh;
+    int countEnemy;
     private void Awake()
     {
         DeadParticule.Stop();
         FireParticules.Stop();
         HealParticule.Stop();
     }
+    //private void Start()
+    //{
+    //    UpdateTextInfo();
+    //}
     public void Shoot()
     {
         if(ammount > 0)
@@ -42,11 +50,22 @@ public class PlayerShoot : MonoBehaviour
                 {
                     Destroy(hit.transform.gameObject);
                     StartCoroutine(anim());
-                    spawnenemy.EnemyDead++;
+                    spawnEnemy.EnemyDead++;
+                    spawnEnemy.Verif();
+                    UpdateTextInfo();
                 }
             }
         }
     }
+
+    public void UpdateTextInfo()
+    {
+        countEnemy = spawnEnemy.EnemySpawn - spawnEnemy.EnemyDead;
+        enemyMesh.text = "Enemy missing : " + countEnemy.ToString();
+    }
+
+    public void ClearEnemyInfo()
+    {enemyMesh.text = string.Empty;}
 
     private IEnumerator anim()
     {

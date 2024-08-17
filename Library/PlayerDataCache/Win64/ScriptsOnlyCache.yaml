@@ -45,6 +45,9 @@ ScriptsOnlyBuild:
     - UnityEngine.UI.Image
     - UnityEngine.UI.Slider
   serializedClasses:
+    Unity.InputSystem:
+    - UnityEngine.InputSystem.InputSettings/iOSSettings
+    - UnityEngine.InputSystem.iOS.PrivacyDataUsage
     Unity.TextMeshPro:
     - TMPro.FaceInfo_Legacy
     - TMPro.FontAssetCreationSettings
@@ -132,41 +135,41 @@ ScriptsOnlyBuild:
     - Class: 111
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 1562}
+      Script: {instanceID: 16628}
     - Class: 114
-      Script: {instanceID: 1608}
+      Script: {instanceID: 16630}
     - Class: 114
-      Script: {instanceID: 2736}
+      Script: {instanceID: 17802}
     - Class: 114
-      Script: {instanceID: 2952}
+      Script: {instanceID: 18018}
     - Class: 114
-      Script: {instanceID: 3254}
+      Script: {instanceID: 18320}
     - Class: 114
-      Script: {instanceID: 3698}
+      Script: {instanceID: 18764}
     - Class: 114
-      Script: {instanceID: 5364}
+      Script: {instanceID: 20430}
     - Class: 114
-      Script: {instanceID: 5446}
+      Script: {instanceID: 20512}
     - Class: 114
-      Script: {instanceID: 5642}
+      Script: {instanceID: 20708}
     - Class: 114
-      Script: {instanceID: 6114}
+      Script: {instanceID: 21180}
     - Class: 114
-      Script: {instanceID: 6234}
+      Script: {instanceID: 21300}
     - Class: 114
-      Script: {instanceID: 6264}
+      Script: {instanceID: 21330}
     - Class: 114
-      Script: {instanceID: 6596}
+      Script: {instanceID: 21582}
     - Class: 114
-      Script: {instanceID: 6836}
+      Script: {instanceID: 21664}
     - Class: 114
-      Script: {instanceID: 7618}
+      Script: {instanceID: 21904}
     - Class: 114
-      Script: {instanceID: 8040}
+      Script: {instanceID: 22686}
     - Class: 114
-      Script: {instanceID: 8222}
+      Script: {instanceID: 23108}
     - Class: 114
-      Script: {instanceID: 28614}
+      Script: {instanceID: 23290}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -186,6 +189,8 @@ ScriptsOnlyBuild:
     - Class: 199
       Script: {instanceID: 0}
     - Class: 208
+      Script: {instanceID: 0}
+    - Class: 213
       Script: {instanceID: 0}
     - Class: 222
       Script: {instanceID: 0}
@@ -217,23 +222,23 @@ ScriptsOnlyBuild:
     - Class: 108
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 1560}
+      Script: {instanceID: 16626}
     - Class: 114
-      Script: {instanceID: 1562}
+      Script: {instanceID: 16628}
     - Class: 114
-      Script: {instanceID: 1608}
+      Script: {instanceID: 16630}
     - Class: 114
-      Script: {instanceID: 2736}
+      Script: {instanceID: 17802}
     - Class: 114
-      Script: {instanceID: 2952}
+      Script: {instanceID: 18018}
     - Class: 114
-      Script: {instanceID: 5446}
+      Script: {instanceID: 20512}
     - Class: 114
-      Script: {instanceID: 6234}
+      Script: {instanceID: 21300}
     - Class: 114
-      Script: {instanceID: 6240}
+      Script: {instanceID: 21306}
     - Class: 114
-      Script: {instanceID: 6596}
+      Script: {instanceID: 21664}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -274,29 +279,29 @@ ScriptsOnlyBuild:
     - Class: 108
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 1560}
+      Script: {instanceID: 16626}
     - Class: 114
-      Script: {instanceID: 1562}
+      Script: {instanceID: 16628}
     - Class: 114
-      Script: {instanceID: 1608}
+      Script: {instanceID: 16630}
     - Class: 114
-      Script: {instanceID: 2258}
+      Script: {instanceID: 17324}
     - Class: 114
-      Script: {instanceID: 2430}
+      Script: {instanceID: 17496}
     - Class: 114
-      Script: {instanceID: 2736}
+      Script: {instanceID: 17802}
     - Class: 114
-      Script: {instanceID: 2952}
+      Script: {instanceID: 18018}
     - Class: 114
-      Script: {instanceID: 4398}
+      Script: {instanceID: 19464}
     - Class: 114
-      Script: {instanceID: 4676}
+      Script: {instanceID: 19742}
     - Class: 114
-      Script: {instanceID: 5446}
+      Script: {instanceID: 20512}
     - Class: 114
-      Script: {instanceID: 6234}
+      Script: {instanceID: 21300}
     - Class: 114
-      Script: {instanceID: 6596}
+      Script: {instanceID: 21664}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -335,23 +340,23 @@ ScriptsOnlyBuild:
     - Class: 108
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 1560}
+      Script: {instanceID: 16626}
     - Class: 114
-      Script: {instanceID: 1562}
+      Script: {instanceID: 16628}
     - Class: 114
-      Script: {instanceID: 1608}
+      Script: {instanceID: 16630}
     - Class: 114
-      Script: {instanceID: 2736}
+      Script: {instanceID: 17802}
     - Class: 114
-      Script: {instanceID: 2944}
+      Script: {instanceID: 18010}
     - Class: 114
-      Script: {instanceID: 2952}
+      Script: {instanceID: 18018}
     - Class: 114
-      Script: {instanceID: 5446}
+      Script: {instanceID: 20512}
     - Class: 114
-      Script: {instanceID: 6234}
+      Script: {instanceID: 21300}
     - Class: 114
-      Script: {instanceID: 6596}
+      Script: {instanceID: 21664}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -377,6 +382,12 @@ ScriptsOnlyBuild:
     className: Button
   - hash:
       serializedVersion: 2
+      Hash: dd9dda1dfd39e605c49e72003342ef5d
+    assemblyName: UnityEngine.UI
+    namespaceName: UnityEngine.UI
+    className: Image
+  - hash:
+      serializedVersion: 2
       Hash: 540882762544409cc4530e60db00e951
     assemblyName: UnityEngine.UI
     namespaceName: UnityEngine.UI
@@ -387,12 +398,6 @@ ScriptsOnlyBuild:
     assemblyName: UnityEngine.UI
     namespaceName: UnityEngine.UIElements
     className: PanelRaycaster
-  - hash:
-      serializedVersion: 2
-      Hash: dd9dda1dfd39e605c49e72003342ef5d
-    assemblyName: UnityEngine.UI
-    namespaceName: UnityEngine.UI
-    className: Image
   - hash:
       serializedVersion: 2
       Hash: 0f19765290d81f9e93eff7828a091d40
@@ -629,7 +634,7 @@ ScriptsOnlyBuild:
     className: ToggleGroup
   - hash:
       serializedVersion: 2
-      Hash: 3ff170360fbe541db602c61c4096f1c1
+      Hash: 00d57e1a4c522cfaccce3efb5f403c3c
     assemblyName: Assembly-CSharp
     namespaceName: 
     className: PlayerShoot
@@ -1079,7 +1084,7 @@ ScriptsOnlyBuild:
     className: PlayerInputManagerEditor
   - hash:
       serializedVersion: 2
-      Hash: ce9524368e9c2938f42ff5081837f6c3
+      Hash: 6e77df7048d86119625a13ab89b64586
     assemblyName: Assembly-CSharp
     namespaceName: 
     className: Player
@@ -1109,7 +1114,7 @@ ScriptsOnlyBuild:
     className: GameOver
   - hash:
       serializedVersion: 2
-      Hash: 7cd2a12df09273012f1c8347acfa5b6f
+      Hash: d04504e4d79c4d53dd294e719f76300c
     assemblyName: Assembly-CSharp
     namespaceName: 
     className: PlayerCamera
@@ -1119,6 +1124,12 @@ ScriptsOnlyBuild:
     assemblyName: Unity.VisualScripting.Core
     namespaceName: Unity.VisualScripting
     className: UnityOnMouseUpAsButtonMessageListener
+  - hash:
+      serializedVersion: 2
+      Hash: d32d24697624e707200a55db9bbe23e1
+    assemblyName: Assembly-CSharp
+    namespaceName: 
+    className: fasterEnemyManager
   - hash:
       serializedVersion: 2
       Hash: 4f353524ce6564e40764f1ea080b2d85
@@ -1187,7 +1198,7 @@ ScriptsOnlyBuild:
     className: TextContainer
   - hash:
       serializedVersion: 2
-      Hash: ebd8cc48f4ded345909b533ac51ab43a
+      Hash: 841fdcda2744f51eaa0241e6ec134d67
     assemblyName: Assembly-CSharp
     namespaceName: 
     className: SpawnEnemy
@@ -1331,7 +1342,7 @@ ScriptsOnlyBuild:
     className: SignalTrack
   - hash:
       serializedVersion: 2
-      Hash: 8754b6a1859f59e4304f504e2e21142a
+      Hash: 476a2edb779ae6c734ea6e64b170df78
     assemblyName: Assembly-CSharp
     namespaceName: 
     className: ObstacleManager
@@ -1379,7 +1390,7 @@ ScriptsOnlyBuild:
     className: TrackedPoseDriver
   - hash:
       serializedVersion: 2
-      Hash: 57b6b847c53680ebdd5bf18cb1483613
+      Hash: 055205ae80518e6145eecebe20d26e8a
     assemblyName: Assembly-CSharp
     namespaceName: 
     className: PlayerMovement
@@ -1415,7 +1426,7 @@ ScriptsOnlyBuild:
     className: TMP_ScrollbarEventHandler
   - hash:
       serializedVersion: 2
-      Hash: 6429c466fb89ceae521be4a69c77fbbd
+      Hash: 3a36a7cdf37946e44c8e8bab8c284774
     assemblyName: Assembly-CSharp
     namespaceName: 
     className: WeaponsReaload
@@ -1461,16 +1472,10 @@ ScriptsOnlyBuild:
     assemblyName: Unity.VisualScripting.Core
     namespaceName: Unity.VisualScripting
     className: UnityOnSliderValueChangedMessageListener
-  - hash:
-      serializedVersion: 2
-      Hash: d32d24697624e707200a55db9bbe23e1
-    assemblyName: Assembly-CSharp
-    namespaceName: 
-    className: fasterEnemyManager
   platform: 19
   scenePathNames:
   - Assets/Scenes/MainMenu.unity
   - Assets/Scenes/Game.unity
   - Assets/Scenes/Victory.unity
   - Assets/Scenes/GameOver.unity
-  playerPath: C:/Users/gassa/OneDrive/Bureau/laHorde/GIT/FPS/build/FPS.exe
+  playerPath: C:/Users/moi/Desktop/build vampire survivor/FPS.exe

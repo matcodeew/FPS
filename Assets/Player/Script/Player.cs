@@ -1,4 +1,5 @@
 using System.Collections;
+using TMPro;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
@@ -9,6 +10,8 @@ public class Player : MonoBehaviour
     [SerializeField] SpawnEnemy spawnEnemy;
     [SerializeField] PlayerShoot shoot;
     [SerializeField] WeaponsReaload weaponReload;
+
+
 
     private float canfire = -1f;
 

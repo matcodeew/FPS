@@ -1,4 +1,5 @@
 using System.Collections;
+using TMPro;
 using UnityEngine;
 
 public class SpawnEnemy : MonoBehaviour
@@ -12,6 +13,11 @@ public class SpawnEnemy : MonoBehaviour
     [SerializeField] private fasterEnemyManager yellowEnemy;
     [SerializeField] private EnemyManager redEnemy;
 
+    [SerializeField] private GameObject player;
+    [SerializeField] private PlayerShoot playerShoot;
+
+    [SerializeField] public TextMeshProUGUI roundMesh;
+
     public int TotalRound;
     public int roundwin;
     int RandomEnemy;
@@ -24,6 +30,7 @@ public class SpawnEnemy : MonoBehaviour
 
     private void Start()
     {
+        roundMesh.text = " round : " + (TotalRound - roundwin).ToString();
         ResetValue();
         StartCoroutine(StartRounds());
         redEnemy.normalAgent.speed = 7;
@@ -36,16 +43,13 @@ public class SpawnEnemy : MonoBehaviour
         {
             if (!RoundStarted)
             {
+                playerShoot.ClearEnemyInfo();
+                yield return new WaitForSeconds(3.0f);
                 Spawn();
-                yield return new WaitForSeconds(2f);
+                yield return new WaitForSeconds(2.0f);
             }
             yield return null;
         }
-    }
-
-    private void Update()
-    {
-        Verif();
     }
 
     void Spawn()
@@ -55,34 +59,40 @@ public class SpawnEnemy : MonoBehaviour
         maxEnemy += 10;
         redEnemy.normalAgent.speed += 1f;
         yellowEnemy.fasterAgent.speed += 1f;
-        Debug.Log(" red : " + redEnemy.normalAgent.speed + " : " + "yellow : " + yellowEnemy.fasterAgent.speed);
-        RandomEnemy = Random.Range(minEnemy, maxEnemy) + 1;
+        RandomEnemy = Random.Range(minEnemy, maxEnemy);
+
+        Vector3 playerPos = player.transform.position;
+
         for (EnemySpawn = 0; EnemySpawn < RandomEnemy; EnemySpawn++)
         {
             RandomTypeEnemy = Random.Range(0, 2);
             if(RandomTypeEnemy == 0)
             {
-                GameObject newEnemy = Instantiate(normalEnemy, transform.position + new Vector3(Random.Range(-100, 100), 0, Random.Range(-100, 100)), Quaternion.identity);
+                GameObject newEnemy = Instantiate(normalEnemy, playerPos + new Vector3(Random.Range(-100, 100), 0, Random.Range(-100, 100)), Quaternion.identity);
                 newEnemy.transform.SetParent(normalEnemyParent.transform);
             }
             else if (RandomTypeEnemy == 1)
             {
-                GameObject newEnemy = Instantiate(FasterEnemy, transform.position + new Vector3(Random.Range(-100, 100), 0, Random.Range(-100, 100)), Quaternion.identity);
+                GameObject newEnemy = Instantiate(FasterEnemy, playerPos + new Vector3(Random.Range(-100, 100), 0, Random.Range(-100, 100)), Quaternion.identity);
                 newEnemy.transform.SetParent(fasterEnemyParent.transform);
             }
         }
+        playerShoot.UpdateTextInfo();
     }
 
-    private void Verif()
+    public void Verif()
     {
         if (EnemyDead == RandomEnemy)
         {
             roundwin++;
             EnemyDead = 0;
 
+            roundMesh.text = " round : " + (TotalRound - roundwin).ToString();
+
             RoundStarted = false;
         }
     }
+
 
     private void ResetValue()
     {

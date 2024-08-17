@@ -3,28 +3,28 @@
   "WorkspaceRootPath": "C:\\Users\\moi\\Desktop\\LaHorde\\GIT\\FPS\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{6CC92EE2-C97E-2137-C111-F092707B90B5}|Assembly-CSharp.csproj|C:\\Users\\moi\\Desktop\\LaHorde\\GIT\\FPS\\assets\\player\\script\\playershoot.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6CC92EE2-C97E-2137-C111-F092707B90B5}|Assembly-CSharp.csproj|solutionrelative:assets\\player\\script\\playershoot.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{6CC92EE2-C97E-2137-C111-F092707B90B5}|Assembly-CSharp.csproj|C:\\Users\\moi\\Desktop\\LaHorde\\GIT\\FPS\\assets\\player\\script\\playermovement.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{6CC92EE2-C97E-2137-C111-F092707B90B5}|Assembly-CSharp.csproj|solutionrelative:assets\\player\\script\\playermovement.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{6CC92EE2-C97E-2137-C111-F092707B90B5}|Assembly-CSharp.csproj|c:\\users\\moi\\desktop\\lahorde\\git\\fps\\assets\\player\\script\\player.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{6CC92EE2-C97E-2137-C111-F092707B90B5}|Assembly-CSharp.csproj|C:\\Users\\moi\\Desktop\\LaHorde\\GIT\\FPS\\assets\\player\\script\\player.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{6CC92EE2-C97E-2137-C111-F092707B90B5}|Assembly-CSharp.csproj|solutionrelative:assets\\player\\script\\player.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6CC92EE2-C97E-2137-C111-F092707B90B5}|Assembly-CSharp.csproj|C:\\Users\\moi\\Desktop\\LaHorde\\GIT\\FPS\\assets\\enemy\\script\\enemymanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6CC92EE2-C97E-2137-C111-F092707B90B5}|Assembly-CSharp.csproj|solutionrelative:assets\\enemy\\script\\enemymanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{6CC92EE2-C97E-2137-C111-F092707B90B5}|Assembly-CSharp.csproj|C:\\Users\\moi\\Desktop\\LaHorde\\GIT\\FPS\\assets\\player\\script\\playercamera.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{6CC92EE2-C97E-2137-C111-F092707B90B5}|Assembly-CSharp.csproj|solutionrelative:assets\\player\\script\\playercamera.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{6CC92EE2-C97E-2137-C111-F092707B90B5}|Assembly-CSharp.csproj|C:\\Users\\moi\\Desktop\\LaHorde\\GIT\\FPS\\assets\\enemy\\script\\spawnenemy.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6CC92EE2-C97E-2137-C111-F092707B90B5}|Assembly-CSharp.csproj|solutionrelative:assets\\enemy\\script\\spawnenemy.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{6CC92EE2-C97E-2137-C111-F092707B90B5}|Assembly-CSharp.csproj|c:\\users\\moi\\desktop\\lahorde\\git\\fps\\assets\\player\\script\\playershoot.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6CC92EE2-C97E-2137-C111-F092707B90B5}|Assembly-CSharp.csproj|solutionrelative:assets\\player\\script\\playershoot.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{6CC92EE2-C97E-2137-C111-F092707B90B5}|Assembly-CSharp.csproj|C:\\Users\\moi\\Desktop\\LaHorde\\GIT\\FPS\\assets\\enemy\\script\\enemymanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6CC92EE2-C97E-2137-C111-F092707B90B5}|Assembly-CSharp.csproj|solutionrelative:assets\\enemy\\script\\enemymanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{6CC92EE2-C97E-2137-C111-F092707B90B5}|Assembly-CSharp.csproj|C:\\Users\\moi\\Desktop\\LaHorde\\GIT\\FPS\\assets\\enemy\\script\\spawnenemy.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6CC92EE2-C97E-2137-C111-F092707B90B5}|Assembly-CSharp.csproj|solutionrelative:assets\\enemy\\script\\spawnenemy.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{6CC92EE2-C97E-2137-C111-F092707B90B5}|Assembly-CSharp.csproj|C:\\Users\\moi\\Desktop\\LaHorde\\GIT\\FPS\\assets\\player\\script\\weaponsreaload.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -50,7 +50,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 6,
+          "SelectedChildIndex": 7,
           "Children": [
             {
               "$type": "Document",
@@ -66,15 +66,16 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 2,
               "Title": "EnemyManager.cs",
               "DocumentMoniker": "C:\\Users\\moi\\Desktop\\LaHorde\\GIT\\FPS\\Assets\\Enemy\\Script\\EnemyManager.cs",
               "RelativeDocumentMoniker": "Assets\\Enemy\\Script\\EnemyManager.cs",
               "ToolTip": "C:\\Users\\moi\\Desktop\\LaHorde\\GIT\\FPS\\Assets\\Enemy\\Script\\EnemyManager.cs",
               "RelativeToolTip": "Assets\\Enemy\\Script\\EnemyManager.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAGAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA4AAAAyAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-30T10:27:38.776Z"
+              "WhenOpened": "2024-06-30T10:27:38.776Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -114,51 +115,51 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 5,
               "Title": "SpawnEnemy.cs",
               "DocumentMoniker": "C:\\Users\\moi\\Desktop\\LaHorde\\GIT\\FPS\\Assets\\Enemy\\Script\\SpawnEnemy.cs",
               "RelativeDocumentMoniker": "Assets\\Enemy\\Script\\SpawnEnemy.cs",
               "ToolTip": "C:\\Users\\moi\\Desktop\\LaHorde\\GIT\\FPS\\Assets\\Enemy\\Script\\SpawnEnemy.cs",
               "RelativeToolTip": "Assets\\Enemy\\Script\\SpawnEnemy.cs",
-              "ViewState": "AQIAADIAAAAAAAAAAAAwwEoAAAAAAAAA",
+              "ViewState": "AQIAAD4AAAAAAAAAAAAhwFIAAAASAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-06-30T10:27:38.779Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 4,
               "Title": "PlayerShoot.cs",
               "DocumentMoniker": "C:\\Users\\moi\\Desktop\\LaHorde\\GIT\\FPS\\Assets\\Player\\Script\\PlayerShoot.cs",
               "RelativeDocumentMoniker": "Assets\\Player\\Script\\PlayerShoot.cs",
               "ToolTip": "C:\\Users\\moi\\Desktop\\LaHorde\\GIT\\FPS\\Assets\\Player\\Script\\PlayerShoot.cs",
               "RelativeToolTip": "Assets\\Player\\Script\\PlayerShoot.cs",
-              "ViewState": "AQIAAAsAAAAAAAAAAAAQwCUAAAAxAAAA",
+              "ViewState": "AQIAACAAAAAAAAAAAAAxwDUAAAAfAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-06-30T10:27:38.78Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 0,
               "Title": "PlayerMovement.cs",
               "DocumentMoniker": "C:\\Users\\moi\\Desktop\\LaHorde\\GIT\\FPS\\Assets\\Player\\Script\\PlayerMovement.cs",
               "RelativeDocumentMoniker": "Assets\\Player\\Script\\PlayerMovement.cs",
               "ToolTip": "C:\\Users\\moi\\Desktop\\LaHorde\\GIT\\FPS\\Assets\\Player\\Script\\PlayerMovement.cs",
               "RelativeToolTip": "Assets\\Player\\Script\\PlayerMovement.cs",
-              "ViewState": "AQIAABIAAAAAAAAAAAAowDsAAAAMAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAB0AAAA/AAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-06-30T10:27:38.781Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 1,
               "Title": "Player.cs",
               "DocumentMoniker": "C:\\Users\\moi\\Desktop\\LaHorde\\GIT\\FPS\\Assets\\Player\\Script\\Player.cs",
               "RelativeDocumentMoniker": "Assets\\Player\\Script\\Player.cs",
               "ToolTip": "C:\\Users\\moi\\Desktop\\LaHorde\\GIT\\FPS\\Assets\\Player\\Script\\Player.cs",
               "RelativeToolTip": "Assets\\Player\\Script\\Player.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAIBJwDcAAAAgAAAA",
+              "ViewState": "AQIAABcAAAAAAAAAAAAQwA0AAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-06-30T10:27:38.782Z",
               "EditorCaption": ""
@@ -171,9 +172,10 @@
               "RelativeDocumentMoniker": "Assets\\Player\\Script\\PlayerCamera.cs",
               "ToolTip": "C:\\Users\\moi\\Desktop\\LaHorde\\GIT\\FPS\\Assets\\Player\\Script\\PlayerCamera.cs",
               "RelativeToolTip": "Assets\\Player\\Script\\PlayerCamera.cs",
-              "ViewState": "AQIAAEAAAAAAAAAAAAA0wD8AAAAFAAAA",
+              "ViewState": "AQIAAA4AAAAAAAAAAAAQwDAAAACFAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-30T10:27:38.908Z"
+              "WhenOpened": "2024-06-30T10:27:38.908Z",
+              "EditorCaption": ""
             }
           ]
         }

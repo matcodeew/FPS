@@ -1,3 +1,4 @@
+using TMPro;
 using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
@@ -8,16 +9,20 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private Player manager;
     Rigidbody rb;
 
-    float bonusLife;
+    [SerializeField] public TextMeshProUGUI lifeMesh;
+
     private void Start()
     {
         rb = GetComponent<Rigidbody>();
         rb.freezeRotation = true;
+
+        lifeMesh.text = manager.currentPlayerLife.ToString() + " / 100";
     }
 
-    public void Update()
+    private void Update()
     {
         MyInput();
+        UpdateLifeMesh();
     }
 
     private void MyInput()
@@ -31,33 +36,46 @@ public class PlayerMovement : MonoBehaviour
         Vector3 movement = direction * speed * Time.deltaTime;
         movement.y = 0;
 
-        transform.Translate(movement);
+        // Applying movement using Rigidbody for better physics handling
+        rb.MovePosition(rb.position + movement);
     }
 
     private void OnCollisionEnter(Collision collision)
     {
-        if(collision.gameObject.tag == "Enemy")
+        if (collision.gameObject.CompareTag("Enemy"))
         {
             manager.PlayerLife();
         }
-        if(collision.gameObject.tag == "HealBonus")
+        else if (collision.gameObject.CompareTag("HealBonus"))
         {
             Destroy(collision.gameObject);
             manager.currentPlayerLife += HealPlayer();
         }
+
+        UpdateLifeMesh();
     }
 
     private int HealPlayer()
     {
-        if(manager.currentPlayerLife < 100)
+        if (manager.currentPlayerLife < 100)
         {
-            if(manager.currentPlayerLife + manager.orbHeal > 100)
-            {return 100 - manager.currentPlayerLife;}
-
+            if (manager.currentPlayerLife + manager.orbHeal > 100)
+            {
+                return 100 - manager.currentPlayerLife;
+            }
             else
-            {return manager.orbHeal; }
+            {
+                return manager.orbHeal;
+            }
         }
         else
-        {return 0;}
+        {
+            return 0;
+        }
+    }
+
+    private void UpdateLifeMesh()
+    {
+        lifeMesh.text = manager.currentPlayerLife.ToString() + " / 100";
     }
 }
